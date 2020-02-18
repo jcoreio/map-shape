@@ -1,31 +1,45 @@
-# typescript-library-skeleton
+# map-shape
 
-[![CircleCI](https://circleci.com/gh/jedwards1211/typescript-library-skeleton.svg?style=svg)](https://circleci.com/gh/jedwards1211/typescript-library-skeleton)
-[![Coverage Status](https://codecov.io/gh/jedwards1211/typescript-library-skeleton/branch/master/graph/badge.svg)](https://codecov.io/gh/jedwards1211/typescript-library-skeleton)
+[![CircleCI](https://circleci.com/gh/jcoreio/map-shape.svg?style=svg)](https://circleci.com/gh/jcoreio/map-shape)
+[![Coverage Status](https://codecov.io/gh/jcoreio/map-shape/branch/master/graph/badge.svg)](https://codecov.io/gh/jcoreio/map-shape)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![npm version](https://badge.fury.io/js/typescript-library-skeleton.svg)](https://badge.fury.io/js/typescript-library-skeleton)
+[![npm version](https://badge.fury.io/js/map-shape.svg)](https://badge.fury.io/js/map-shape)
 
-This is my personal skeleton for creating an typescript library npm package. You are welcome to use it.
+One of those missing lodash functions
 
-## Quick start
+```js
+import mapShape from 'map-shape'
 
-```sh
-npx 0-60 clone https://github.com/jedwards1211/typescript-library-skeleton.git
+mapShape(
+  {
+    foo: 1,
+    bar: '2',
+    baz: 'hello',
+  },
+  {
+    foo: (x, key, obj) => `${x} ${key} ${obj.baz}`,
+    bar: x => parseInt(x),
+  }
+)
+// outputs { foo: '1 foo hello', bar: 2 }
 ```
 
-## Tools used
+## FP Version
 
-- babel 7
-- typescript
-- mocha
-- chai
-- istanbul
-- nyc
-- eslint
-- prettier
-- husky
-- semantic-release
-- renovate
-- Circle CI
-- Codecov.io
+Works better with `lodash/fp`. Only passes a single argument to the mapping functions,
+the `value` corresponding to the key.
+
+```js
+import mapShape from 'map-shape/fp'
+
+mapShape({
+  foo: String,
+  bar: parseInt,
+})({
+  foo: 1,
+  bar: '2',
+  baz: 'hello',
+})
+// outputs { foo: '1', bar: 2
+```

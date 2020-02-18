@@ -1,7 +1,7 @@
 {
-  "name": "typescript-library-skeleton",
+  "name": "map-shape",
   "version": "0.0.0-development",
-  "description": "my personal ES2015 library project skeleton",
+  "description": "apply mapping functions to specific properties of an object",
   "main": "index.js",
   "sideEffects": false,
   "scripts": {
@@ -69,17 +69,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jedwards1211/typescript-library-skeleton.git"
+    "url": "https://github.com/jcoreio/map-shape.git"
   },
   "keywords": [
-    "typescript"
+    "map",
+    "transform",
+    "object",
+    "functional-programming"
   ],
   "author": "Andy Edwards",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jedwards1211/typescript-library-skeleton/issues"
+    "url": "https://github.com/jcoreio/map-shape/issues"
   },
-  "homepage": "https://github.com/jedwards1211/typescript-library-skeleton#readme",
+  "homepage": "https://github.com/jcoreio/map-shape#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
