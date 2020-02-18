@@ -41,5 +41,5 @@ mapShape({
   bar: '2',
   baz: 'hello',
 })
-// outputs { foo: '1', bar: 2
+// outputs { foo: '1', bar: 2 }
 ```
