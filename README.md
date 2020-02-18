@@ -6,7 +6,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![npm version](https://badge.fury.io/js/map-shape.svg)](https://badge.fury.io/js/map-shape)
 
-One of those missing lodash functions
+One of those missing lodash functions. Includes TypeScript definitions. Flow definitions TBD...
 
 ```js
 import mapShape from 'map-shape'
