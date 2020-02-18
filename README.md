@@ -18,17 +18,22 @@ mapShape(
     baz: 'hello',
   },
   {
-    foo: (x, key, obj) => `${x} ${key} ${obj.baz}`,
-    bar: x => parseInt(x),
+    foo: (value, key, obj) => `${value} ${key} ${obj.baz}`,
+    bar: value => parseInt(value),
   }
 )
 // outputs { foo: '1 foo hello', bar: 2 }
 ```
 
+Each mapper function is called with three arguments:
+
+- `value` - the value of the input property
+- `key` - the key of the input property
+- `obj` - the input object
+
 ## FP Version
 
-Works better with `lodash/fp`. Only passes a single argument to the mapping functions,
-the `value` corresponding to the key.
+Works better with `lodash/fp`. Only passes the `value` to each mapper function.
 
 ```js
 import mapShape from 'map-shape/fp'
