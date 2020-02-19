@@ -1,0 +1,8 @@
+// @flow
+
+declare export default <M: {}>(mapper: M) => (
+  & ((obj: void) => void)
+  & ((obj: null) => null)
+  & (<A: $ObjMap<M, <I, O>(I => O) => I>>(obj: A) =>
+    $ObjMap<M, <I, O>(I => O) => O>)
+)

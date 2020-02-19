@@ -6,7 +6,8 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![npm version](https://badge.fury.io/js/map-shape.svg)](https://badge.fury.io/js/map-shape)
 
-One of those missing lodash functions. Includes TypeScript definitions. Flow definitions TBD...
+One of those missing lodash functions. Includes TypeScript definitions and Flow definitions
+(they aren't prefect, there are some edge cases...)
 
 ```js
 import mapShape from 'map-shape'
@@ -30,6 +31,10 @@ Each mapper function is called with three arguments:
 - `value` - the value of the input property
 - `key` - the key of the input property
 - `obj` - the input object
+
+### Notes
+
+If the input object is `null`, returns `null`. If the input object is `undefined`, returns `undefined`.
 
 ## FP Version
 

@@ -1,0 +1,17 @@
+// @flow
+
+declare export default function mapShape(
+  obj: void,
+  mapper: any 
+): void
+declare export default function mapShape(
+  obj: null,
+  mapper: any 
+): null
+declare export default function mapShape<
+  A: {},
+  M: $ReadOnly<$ObjMapi<A, <K, I, O>(K, I) => (I, K, A) => O>>
+>(
+  obj: A,
+  mapper: M
+): $ObjMap<M, <K, I, O>((I, K, A) => O) => O> 
